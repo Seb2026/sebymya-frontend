@@ -9,9 +9,10 @@ function App() {
   return (
     <div className="App">
       <Link to="/addphoto">Add Photo</Link>
+      <Link to="/home">Home</Link>
 
       <Switch>
-        <Route exact path="/" render={(props) => <Home {...props} />} />
+        <Route exact path="/home" render={(props) => <Home {...props} />} />
         <Route
           exact
           path="/addphoto"
