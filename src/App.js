@@ -8,11 +8,16 @@ import Home from "./components/Home";
 function App() {
   return (
     <div className="App">
-      <Link to="/addphoto">Add Photo</Link>
-      <Link to="/home">Home</Link>
+      <Link className="navbar" to="/addphoto">
+        Add Photo
+      </Link>
+      <Link className="navbar" to="/">
+        Home
+      </Link>
+      {/* <Link to="/home">View Photos</Link> */}
 
       <Switch>
-        <Route exact path="/home" render={(props) => <Home {...props} />} />
+        <Route exact path="/" render={(props) => <Home {...props} />} />
         <Route
           exact
           path="/addphoto"
