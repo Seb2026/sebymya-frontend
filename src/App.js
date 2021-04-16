@@ -4,6 +4,7 @@ import AddPhoto from "./components/photos/AddPhoto";
 import axios from "axios";
 import { Switch, Route, Link } from "react-router-dom";
 import Home from "./components/Home";
+import ShowPhotos from "./components/photos/ShowPhotos";
 
 function App() {
   return (
@@ -14,7 +15,9 @@ function App() {
       <Link className="navbar" to="/">
         Home
       </Link>
-      {/* <Link to="/home">View Photos</Link> */}
+      <Link className="navbar" to="/showphotos">
+        All Photos
+      </Link>
 
       <Switch>
         <Route exact path="/" render={(props) => <Home {...props} />} />
@@ -22,6 +25,11 @@ function App() {
           exact
           path="/addphoto"
           render={(props) => <AddPhoto {...props} />}
+        />
+        <Route
+          exact
+          path="/showphotos"
+          render={(props) => <ShowPhotos {...props} />}
         />
       </Switch>
     </div>
