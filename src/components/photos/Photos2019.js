@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import axios from "axios";
 
-export default class ShowPhotos extends Component {
+export default class Photos2019 extends Component {
   state = {
     listOfPhotos: [],
   };
@@ -16,17 +16,18 @@ export default class ShowPhotos extends Component {
 
   showAllPhotos = () => {
     return this.state.listOfPhotos.map((eachPhoto) => {
-      return (
-        <div key={eachPhoto._id}>
-          <span>{eachPhoto.year}</span>
-          <br />
-          <img
-            width="100px"
-            src={eachPhoto.imageUrl}
-            alt="seb and mya photos"
-          />
-        </div>
-      );
+      if (eachPhoto.year === "2019")
+        return (
+          <div key={eachPhoto._id}>
+            <span>{eachPhoto.year}</span>
+            <br />
+            <img
+              width="100px"
+              src={eachPhoto.imageUrl}
+              alt="seb and mya photos"
+            />
+          </div>
+        );
     });
   };
 

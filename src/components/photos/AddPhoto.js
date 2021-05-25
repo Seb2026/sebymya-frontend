@@ -58,13 +58,7 @@ export default class AddPhoto extends Component {
         <form onSubmit={this.handleSubmit}>
           <label>
             Year:
-            <input
-              type="number"
-              min="0"
-              name="year"
-              value={this.state.year}
-              onChange={this.handleChange}
-            />
+            <input type="number" onChange={this.handleChange} name="year" />
           </label>
 
           <label>
